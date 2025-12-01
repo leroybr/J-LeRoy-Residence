@@ -84,9 +84,9 @@ const Hero: React.FC<HeroProps> = ({ onSearch, isSearching }) => {
 
       {/* Content */}
       <div className="relative z-20 w-full max-w-6xl px-4 text-center">
-        {/* Updated Title: Single Line (Responsive Text Size) */}
-        <h1 className="font-serif text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-white mb-8 md:mb-10 leading-tight drop-shadow-2xl whitespace-normal md:whitespace-nowrap overflow-hidden text-ellipsis px-2">
-          Explora las exclusivas propiedades
+        {/* Updated Title: Slightly smaller font size */}
+        <h1 className="font-serif text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mb-8 md:mb-10 leading-tight drop-shadow-2xl px-2 max-w-5xl mx-auto">
+          Vende o compra tu propiedad con acompañamiento profesional y seguro.
         </h1>
         
         {/* Multi-field Search Bar (Responsive Pill Style) */}

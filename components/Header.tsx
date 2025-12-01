@@ -54,7 +54,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentView }) => {
         <div className="flex flex-col items-start">
           
           {/* Top Row: Logo & Actions */}
-          <div className="flex justify-between items-end w-full mb-0 md:mb-6">
+          <div className="flex justify-between items-end w-full mb-0 md:mb-3">
             
             {/* Logo Section */}
             <div className={`flex-shrink-0 cursor-pointer group ${logoColorClass}`} onClick={() => handleMobileNavigate('home')}>
@@ -77,12 +77,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentView }) => {
               >
                 Ingresar
               </button>
-              <button 
-                onClick={() => onNavigate('admin')}
-                className={`border px-6 py-2 text-[10px] font-bold tracking-[0.2em] uppercase transition-all ${buttonBorderClass}`}
-              >
-                Publicar
-              </button>
+              {/* Publicar button hidden as requested */}
             </div>
             
             {/* Mobile Menu Icon */}
@@ -105,7 +100,7 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentView }) => {
           </div>
 
           {/* Desktop Navigation Container */}
-          <div className="hidden md:flex flex-col w-full items-start gap-y-5">
+          <div className="hidden md:flex flex-col w-full items-start gap-y-2">
             {/* Row 1: Communes */}
             <div className="flex flex-wrap gap-x-6">
               {communeItems.map((item) => (
@@ -168,14 +163,15 @@ const Header: React.FC<HeaderProps> = ({ onNavigate, currentView }) => {
             </div>
           </div>
 
-          <div className="border-t border-gray-100 pt-6 mt-auto">
+          {/* Hidden Admin Button for Mobile as well */}
+          {/* <div className="border-t border-gray-100 pt-6 mt-auto">
              <button 
                 onClick={() => handleMobileNavigate('admin')}
                 className="w-full bg-leroy-black text-white px-4 py-3 text-xs font-bold tracking-widest uppercase mb-3"
               >
-                Publicar Propiedad
+                Ingresar
               </button>
-          </div>
+          </div> */}
         </div>
       )}
     </header>
